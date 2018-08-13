@@ -4,19 +4,28 @@ Dependency - gtsam
 https://github.com/borglab/gtsam
 Clone latest develop branch
 
-prerequisites:
+## prerequisites:
 Boost >= 1.43 (Ubuntu: sudo apt-get install libboost-all-dev)
+
 CMake >= 2.6 (Ubuntu: sudo apt-get install cmake)
+
 A modern compiler, i.e., at least gcc 4.7.3 on Linux.
 
+
+## Install
 In the root library folder execute:
+
 $ mkdir build
+
 $ cd build
+
 $ cmake ..
+
 $ make check (optional, runs unit tests)
+
 $ make install
 
-(IMPORTANT)
+## Error Fix
 After executing ./update,
 * cd blam/internal/src/geometry_utils
 * add two lines below to package.xml
