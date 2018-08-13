@@ -40,6 +40,9 @@ find_package(catkin REQUIRED COMPONENTS roscpp)
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
+*** Additional Reference 
+https://answers.ros.org/question/145801/cant-locate-node-in-package/
+
 
 # B(erkeley) L(ocalization) A(nd) M(apping)!
 
