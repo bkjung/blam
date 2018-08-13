@@ -1,3 +1,37 @@
+# bkjung added
+Dependency - gtsam
+
+https://github.com/borglab/gtsam
+Clone latest develop branch
+
+prerequisites:
+Boost >= 1.43 (Ubuntu: sudo apt-get install libboost-all-dev)
+CMake >= 2.6 (Ubuntu: sudo apt-get install cmake)
+A modern compiler, i.e., at least gcc 4.7.3 on Linux.
+
+In the root library folder execute:
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make check (optional, runs unit tests)
+$ make install
+
+(IMPORTANT)
+After executing ./update,
+* cd blam/internal/src/geometry_utils
+* add two lines below to package.xml
+
+<build_depend>roscpp</build_depend>
+
+<run_depend>roscpp</run_depend>
+
+* edit CMakeList.txt as follows
+
+find_package(catkin REQUIRED COMPONENTS roscpp)
+
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+
 # B(erkeley) L(ocalization) A(nd) M(apping)!
 
 ![alt text](https://github.com/erik-nelson/blam/raw/master/blam_mosaic.png)
